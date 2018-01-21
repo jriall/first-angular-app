@@ -1,0 +1,10 @@
+<button class="btn btn-primary" (click)="buttonClick()">Display Details</button>
+<p *ngIf="paragraphShowing">Test paragraph</p>
+<p [ngClass]="{overFive : clickArray.length >= 5}">{{ clickArray.length }}</p>
+<div
+  *ngFor="let clickItem of clickArray; let i = index"
+  [ngStyle]="{backgroundColor: i >= 5 ? 'blue' : 'transparent'}"
+  [ngClass]="{'white-text': i >= 5}"
+>
+  {{ clickItem }}
+</div>
